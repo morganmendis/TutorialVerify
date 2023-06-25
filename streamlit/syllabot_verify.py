@@ -10,6 +10,9 @@ import openai
 from dotenv import load_dotenv
 load_dotenv()
 
+# Install the certificate
+ os.system("curl --create-dirs -o $HOME/.postgresql/root.crt 'https://cockroachlabs.cloud/clusters/8d677aaa-8466-493c-b0a7-8eea06abee0b/cert'")
+
 ##TODO use langchain pinecone client to implement flow here
 # Add the current directory to the syspath
 currentdir = os.getcwd()
