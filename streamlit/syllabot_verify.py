@@ -14,7 +14,9 @@ load_dotenv()
 # Add the current directory to the syspath
 currentdir = os.getcwd()
 parentdir = os.path.dirname(currentdir)
-sys.path.append(parentdir,currentdir)
+sys.path.append(parentdir)
+sys.path.append(currentdir)
+
 
 # Import the custom python module for interacting with Pinecone and OpenAI
 import components.pinecone_langchain as plc
